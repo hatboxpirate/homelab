@@ -39,3 +39,19 @@ Disabled Enterprise Repository: The enterprise repository was disabled to preven
 Enabled No-Subscription Repository: Added the Proxmox VE No-Subscription Repository to get timely community-tested updates.
 
 Configured Network: Set a static IP address for the management interface to ensure consistent access to the Proxmox web UI.
+
+### 5. Host Management & Automation Tools
+
+To streamline the creation of LXC containers, I use customized versions of the Proxmox VE Helper Scripts by `tteck`. I store the scripts locally in this repository to ensure reproducibility and track any modifications I make.
+
+The scripts are located in the [`/proxmox/scripts/`](./scripts/) directory and are run directly from the Proxmox host's shell.
+
+### 6. Guest VMs and Containers
+
+This table provides a high-level overview of the guests running on this Proxmox host. Each guest has its own detailed documentation in its respective directory.
+
+| ID   | Hostname        | Type      | Service / Role             | Documentation Link                           |
+| ---- | --------------- | --------- | -------------------------- | -------------------------------------------- |
+| xxx  | `pfsense`       | VM        | Firewall & Router          | [Link](../pfsense/README.md)                 |
+| xxx  | `omv`           | VM        | NAS (OpenMediaVault)       | [Link](../openmediavault/README.md)          |
+| xxx  | `media-stack`   | Container | *Arr Stack & Media Server* | *Coming Soon* |
